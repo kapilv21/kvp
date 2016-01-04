@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script>
+	function showArray(){
+		
+		var myArray = new Array(4);
+		myArray[0] = 1;
+		myArray[1] = "myStr";
+		myArray[2] = true;
+		myArray[3] = 23.5;
+		
+		showArray = document.getElementById("showArray");
+		for(var i=0; i<myArray.length; i++){
+			var newDiv = document.createElement("div");//this can be tr or td or table
+			newDiv.innerHTML = "element "+i+" is "+myArray[i].toString()+"\n";
+			showArray.appendChild(newDiv);
+		}
+		
+		
+	}
+</script>
+</head>
+<body>
+
+
+<input type="button" value="Show Array" onClick="showArray();">
+<div id="showArray"></div>
+</body>
+</html>
