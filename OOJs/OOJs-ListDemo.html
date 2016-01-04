@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script>
+
+//This program demonstrates that a value entered in a text box would be added to a list and then list is displayed
+var list= [];
+
+function addToList(){
+	var showArrayObj = document.getElementById("showArray");
+	alert(showArray);
+	var x = document.getElementById("txt");
+	list[list.length] = x.value;
+	createDiv(showArrayObj);
+}
+function createDiv(showArrayObj){
+	var newDiv = document.createElement("table");	// you can keep this as row td or table anything
+	for(var i=0; i<list.length; i++){
+		alert(list.length+"  "+list[i]);
+		newDiv.innerHTML = "" +list[i];
+	} 
+	showArrayObj.appendChild(newDiv);
+}
+
+</script>
+</head>
+<body>
+
+<input type="text" id="txt"/>
+<input type="button" id="btn" value="Add to List" onClick="addToList();">
+<div id="showArray"></div>
+</body>
+</html>
